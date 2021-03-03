@@ -10,25 +10,8 @@
     <p>Active: {{ active ? 'yes' : 'no' }}</p>
     <p>Clicks on todos: {{ clickCount }}</p>
 
-    <div> 
-       <div class="q-pa-md">
-    <div class="q-gutter-y-md" style="max-width: 300px">
-      <q-tabs
-        v-model="tab"
-        inline-label
-        outside-arrows
-        mobile-arrows
-        class="bg-primary text-white shadow-2"
-      >
-        <q-tab name="mails" icon="mail" label="Mails" />
-        <q-tab name="alarms" icon="alarm" label="Alarms" />
-        <q-tab name="movies" icon="movie" label="Movies" />
-        <q-tab name="photos" icon="photo" label="Photos" />
-        <q-tab name="videos" icon="slow_motion_video" label="Videos" />
-        <q-tab name="addressbook" icon="people" label="Address Book" />
-      </q-tabs>
-    </div>
-  </div>
+    <div>
+       <div class="q-pa-md"></div>
     </div>
   </div>
 </template>
@@ -45,7 +28,7 @@ export default class ClassComponent extends Vue {
   @Prop(Boolean) readonly active!: boolean;
 
   clickCount = 0;
-  public tab:string ='mails';
+  public tab ='mails';
   increment () {
     this.clickCount += 1
   }
