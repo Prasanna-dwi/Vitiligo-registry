@@ -49,11 +49,9 @@
                     >
                         <q-item-section side>
                             <q-checkbox
-                                :v-model="selected"
                                 :value="selected"
                                 type="checkbox"
                                 :label="opt.label"
-                                @input="checkedOption(opt)"
                             />
                         </q-item-section>
                     </q-item>
