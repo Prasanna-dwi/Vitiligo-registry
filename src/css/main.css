@@ -1,0 +1,16 @@
+.q-tab__label{
+    font-size: 24px;
+    color:#fce4ec;
+}
+.form-backgorund{
+    background-image: linear-gradient(#fcfcfd, #d4dae6, #c3ccdd);
+}
+.page-section-block{
+    border:1px solid #66576d;
+}
+.seperator{
+    background: #66576d;
+}
+.input-text-color .q-placeholder, .input-text-color .q-radio__label{
+    color: #651b79 !important;
+}

@@ -1,21 +1,22 @@
 <template>
-    <div class="row" style>
+    <div class="row bg-purple q-pa-md">
       <div class="col-1">
-      <q-btn color="" label="" flat > <q-icon name="keyboard_arrow_left"/> </q-btn>
+      <q-btn color="white" label="" flat > <q-icon name="keyboard_arrow_left" class="text-h6"/> </q-btn>
       
       </div>
       <div class="col">
       <q-tabs
         v-model="tab"
         inline-label
-        class=" text-white "
+        indicator-color="transparent"
+        class=" text-white text-h6 text-color-purple1"
         align="justify"
       >
-        <q-route-tab v-for="tab in tabs" v-bind:data="tab"  v-bind:key="tab.link"   :to="{ name:tab.link}" :icon="tab.icon" :label="tab.label"  />
+        <q-route-tab v-for="tab in tabs" v-bind:data="tab"  v-bind:key="tab.link"   :to="{ name:tab.link}" :icon="tab.icon" :label="tab.label" class="text-h6" />
       </q-tabs>
         </div>
       <div class="col-1">
-       <q-btn color="" label="" flat > <q-icon name="keyboard_arrow_right"/> </q-btn>
+       <q-btn color="white" label="" flat > <q-icon name="keyboard_arrow_right" class="text-h6"/> </q-btn>
       </div>
     </div>
 </template>
