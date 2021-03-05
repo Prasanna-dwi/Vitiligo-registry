@@ -3,10 +3,12 @@ import HistoryForm from 'components/HistoryForm.vue';
 const routes: RouteConfig[] = [
   {
     path: '/',
-    component: () => import('layouts/FullScreenLayout.vue'), meta :{ showTabMenu:false, label:'Home' } ,
+    component: () => import('layouts/ScreenLayout.vue'), meta :{ showTabMenu:false, label:'Home' } ,
     children: [
-      { path: '', name:'home', component: () => import('pages/Index.vue') ,meta :{ showTabMenu:true, label: 'Home' } },
-      { path: 'history', name:'history', component: () => import('pages/History.vue'),meta :{ showTabMenu:true, label: 'History' } }
+      { path: '', name:'history', component: () => import('pages/History.vue') ,meta :{ showTabMenu:true, label: 'History' } },
+      { path: 'treatment', name:'treatment', component: () => import('pages/Treatment.vue'),meta :{ showTabMenu:true, label: 'Treatment' } },
+      { path: 'examination', name:'examination', component: () => import('pages/Examination.vue'),meta :{ showTabMenu:true, label: 'Examination' } },
+      { path: 'questions', name:'questions', component: () => import('pages/QualityLife.vue'),meta :{ showTabMenu:true, label: 'QualityLife' } }
     ]
 
   },
