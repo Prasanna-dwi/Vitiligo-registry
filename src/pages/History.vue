@@ -2,15 +2,13 @@
     <q-page class="HistoryForm">
         <div class="row bg-purple q-pa-lg q-mb-lg">
             <div class="col-1">
-            <q-btn color="white" label="" flat to="/questions" class="arrow-buttons"> <q-icon name="keyboard_arrow_left" class="text-h6"/> </q-btn>
-            
+            <q-btn color="white" label="" flat to="/questions" class="arrow-buttons"> <q-icon name="keyboard_arrow_left" class="text-h6"/></q-btn>
             </div>
             <div class="col">
                 <h6 class="text-h6 no-margin text-center text-white">History</h6>
-            
             </div>
             <div class="col-1">
-            <q-btn color="white" label="" flat to="/treatment" class="arrow-buttons"> <q-icon name="keyboard_arrow_right" class="text-h6"/> </q-btn>
+            <q-btn color="white" label="" flat to="/treatment" class="arrow-buttons"> <q-icon name="keyboard_arrow_right" class="text-h6"/></q-btn>
             </div>
         </div>
         <div class="q-pl-md q-pr-md">
@@ -26,7 +24,6 @@
                 <q-card-section class="q-pt-md q-pb-md">
                     <q-radio  :label="$t('patient.gender.male')" val="M" color="purple" v-model="patient.gender" class="input-text-color q-pr-xl" />
                     <q-radio :label="$t('patient.gender.female')" val="F" color="purple" v-model="patient.gender" class="input-text-color q-pr-xl q-pl-md" />
-                    
                 </q-card-section>
             </q-card>
             <q-card class="my-card no-shadow page-section-block q-mt-lg q-mb-lg">
@@ -67,7 +64,6 @@
                                 <q-toggle
                                     :value="selected"
                                     @input="toggleOption(opt)"
-                                    
                                 />
                             </q-item-section>
                             <q-item-section>
@@ -76,7 +72,6 @@
                         </q-item>
                         </template>
                     </q-select>
-                    
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-sm q-pb-sm q-pl-xs q-pr-xs">
@@ -110,9 +105,7 @@
                         </q-item>
                         </template>
                     </q-select>
-                    
-                </q-card-section> -->
-
+                 </q-card-section> -->
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
                 <q-card-section class="bg-pink1">
@@ -123,22 +116,18 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.symptionType" name="Redness" val="Redness" color="purple" :label="$t('patient.redness')" class="text-caption input-text-color"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.symptionType" name="Redness" val="Redness" color="purple" :label="$t('patient.redness')" class="text-caption input-text-color"/>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.symptionType" name="pain" val="pain" color="purple" :label="$t('patient.pain')" class="text-caption input-text-color"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.symptionType" name="pain" val="pain" color="purple" :label="$t('patient.pain')" class="text-caption input-text-color"/>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.symptionType" name="itching" val="itching" color="purple" :label="$t('patient.itching')" class="text-caption input-text-color"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.symptionType" name="itching" val="itching" color="purple" :label="$t('patient.itching')" class="text-caption input-text-color"/>
                 </q-card-section>
-
-
-
             </q-card>
-
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
                 <q-card-section class="bg-pink1">
                     <div class="row">
@@ -160,20 +149,20 @@
                 </q-card-section>
             <!--- <div class="stage-Section" v-if="patient.haloNaevi==='Y'">
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.haloStages" name="moleCircularRing" val="moleCircularRing" color="purple" :label="$t('patient.moleCircularRing')" class="text-caption input-text-color"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.haloStages" name="moleCircularRing" val="moleCircularRing" color="purple" :label="$t('patient.moleCircularRing')" class="text-caption input-text-color"/>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.haloStages" name="moleFadePinker" val="moleFadePinker" color="purple" :label="$t('patient.moleFadePinker')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.haloStages" name="moleFadePinker" val="moleFadePinker" color="purple" :label="$t('patient.moleFadePinker')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.haloStages" val="ovalAreas" color="purple" :label="$t('patient.ovalAreas')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.haloStages" val="ovalAreas" color="purple" :label="$t('patient.ovalAreas')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.haloStages" val="whitePatch" color="purple" :label="$t('patient.whitePatch')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.haloStages" val="whitePatch" color="purple" :label="$t('patient.whitePatch')" class="text-caption input-text-color" />
                     </q-card-section>
                 </div> -->
             </q-card>
@@ -199,36 +188,36 @@
                 </q-card-section>
                 <div class="stage-Section" v-if="patient.bodySurface==='Y'">
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSF" color="purple" :label="$t('patient.face')" class="text-caption input-text-color"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSF" color="purple" :label="$t('patient.face')" class="text-caption input-text-color"/>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSN" color="purple" :label="$t('patient.neck')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSN" color="purple" :label="$t('patient.neck')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BST" color="purple" :label="$t('patient.trunk')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BST" color="purple" :label="$t('patient.trunk')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSUL" color="purple" :label="$t('patient.upperLimbs')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSUL" color="purple" :label="$t('patient.upperLimbs')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSLL" color="purple" :label="$t('patient.bsLL')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSLL" color="purple" :label="$t('patient.bsLL')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSH" color="purple" :label="$t('patient.hands')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSH" color="purple" :label="$t('patient.hands')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSF" color="purple" :label="$t('patient.feet')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSF" color="purple" :label="$t('patient.feet')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSS" color="purple" :label="$t('patient.scalp')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.bodySurfaceSites" val="BSS" color="purple" :label="$t('patient.scalp')" class="text-caption input-text-color" />
                     </q-card-section>
 
                 </div>
@@ -243,11 +232,11 @@
                 </q-card-section>
                 <div class="stage-Section">
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
                         <q-select borderless :label="$t('patient.DM')" class="text-caption input-text-color q-pl-md q-pr-md"/>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
                         <q-select borderless v-model="thyroid" :options="thyroidOptions" :label="$t('patient.thyroid')" class="text-caption input-text-color q-pl-md q-pr-md" />
                     </q-card-section>
                 </div>
@@ -262,32 +251,32 @@
                 </q-card-section>
                 <div class="stage-Section">
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="NMT" color="purple" :label="$t('patient.nmt')" class="text-caption input-text-color"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="NMT" color="purple" :label="$t('patient.nmt')" class="text-caption input-text-color"/>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="MAS" color="purple" :label="$t('patient.mas')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="MAS" color="purple" :label="$t('patient.mas')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="LT" color="purple" :label="$t('patient.mLT')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="LT" color="purple" :label="$t('patient.mLT')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="PLT" color="purple" :label="$t('patient.puvaLT')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="PLT" color="purple" :label="$t('patient.puvaLT')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="SU" color="purple" :label="$t('patient.mSU')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="SU" color="purple" :label="$t('patient.mSU')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="UT" color="purple" :label="$t('patient.mUT')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="UT" color="purple" :label="$t('patient.mUT')" class="text-caption input-text-color" />
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-checkbox v-model="patient.drugHistory" val="DP" color="purple" :label="$t('patient.mDP')" class="text-caption input-text-color" /> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.drugHistory" val="DP" color="purple" :label="$t('patient.mDP')" class="text-caption input-text-color" />
                     </q-card-section>
                 </div>
             </q-card>
@@ -300,12 +289,12 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="no-padding">  
-                    <q-input rows="2" borderless :placeholder="$t('patient.placeholder.occupation')" type="textarea" v-model="patient.occupation" class="input-text-color q-pl-md"/> 
+                <q-card-section class="no-padding">
+                    <q-input rows="2" borderless :placeholder="$t('patient.placeholder.occupation')" type="textarea" v-model="patient.occupation" class="input-text-color q-pl-md"/>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="no-padding">  
-                    <q-input borderless  rows="2" :placeholder="$t('patient.placeholder.hobbies')" type="textarea" v-model="patient.hobbies" class="input-text-color q-pl-md"/> 
+                <q-card-section class="no-padding">
+                    <q-input borderless  rows="2" :placeholder="$t('patient.placeholder.hobbies')" type="textarea" v-model="patient.hobbies" class="input-text-color q-pl-md"/>
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
@@ -329,7 +318,6 @@
                                 <q-toggle
                                     :value="selected"
                                     @input="toggleOption(opt)"
-                                    
                                 />
                             </q-item-section>
                             <q-item-section>
@@ -341,8 +329,8 @@
 
                 </q-card-section>
                 <!-- <q-separator class="seperator" />
-                <q-card-section class="no-padding">  
-                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.habits')" type="textarea" v-model="patient.habiets" class="input-text-color q-pl-md"/> 
+                <q-card-section class="no-padding">
+                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.habits')" type="textarea" v-model="patient.habiets" class="input-text-color q-pl-md"/>
                 </q-card-section> -->
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
@@ -354,32 +342,29 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-checkbox v-model="patient.familyHistory" val="DM" color="purple" :label="$t('patient.fDM')" class="input-text-color" /> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.familyHistory" val="DM" color="purple" :label="$t('patient.fDM')" class="input-text-color" />
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-checkbox v-model="patient.familyHistory" val="TY" color="purple" :label="$t('patient.thyroid')" class="input-text-color" /> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.familyHistory" val="TY" color="purple" :label="$t('patient.thyroid')" class="input-text-color" />
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-checkbox v-model="patient.familyHistory" val="VI" color="purple" :label="$t('patient.vitiligo')" class="input-text-color" /> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.familyHistory" val="VI" color="purple" :label="$t('patient.vitiligo')" class="input-text-color" />
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-checkbox v-model="patient.familyHistory" val="GY" color="purple" :label="$t('patient.fGY')" class="input-text-color" /> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.familyHistory" val="GY" color="purple" :label="$t('patient.fGY')" class="input-text-color" />
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-checkbox v-model="patient.familyHistory" val="Oth" color="purple" :label="$t('patient.other')" class="input-text-color" /> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.familyHistory" val="Oth" color="purple" :label="$t('patient.other')" class="input-text-color" />
                 </q-card-section>
-                
                 <q-separator class="seperator" />
-                <div v-for="familyhistory in patient.familyHistory">
+                <div v-for="familyhistory in patient.familyHistory" :key="familyhistory.id">
                     <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="familyhistory==='Oth'">
-                    
-                        <q-input rows="2" borderless :placeholder="$t('patient.placeholder.familyDetails')" type="textarea" v-model="patient.otherFD" class="input-text-color q-pl-md"/> 
-                    
+                        <q-input rows="2" borderless :placeholder="$t('patient.placeholder.familyDetails')" type="textarea" v-model="patient.otherFD" class="input-text-color q-pl-md"/>
                     </q-card-section>
                 </div>
             </q-card>
@@ -392,9 +377,35 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterOAUD')" type="textarea" v-model="patient.oAUD" class="input-text-color q-pl-md"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="DM" color="purple" :label="$t('patient.dM')" class="input-text-color" />
                 </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="TY" color="purple" :label="$t('patient.thyroiditis')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="PEA" color="purple" :label="$t('patient.pernicios')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="Psoriasis" color="purple" :label="$t('patient.psoriasis')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="ADDS" color="purple" :label="$t('patient.addisons')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.autoimmuneD" val="Oth" color="purple" :label="$t('patient.aother')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <div v-for="autoimmuneD in patient.autoimmuneD" :key="autoimmuneD.id">
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="autoimmuneD==='Oth'">
+                        <q-input rows="2" borderless :placeholder="$t('patient.placeholder.otherDetails')" type="textarea" v-model="patient.otherautoimmuneD" class="input-text-color q-pl-md"/>
+                    </q-card-section>
+                </div>
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
                 <q-card-section class="bg-pink1 text-white">
@@ -405,8 +416,8 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterVision')" type="textarea" v-model="patient.enterVision" class="input-text-color q-pl-md"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterVision')" type="textarea" v-model="patient.enterVision" class="input-text-color q-pl-md"/>
                 </q-card-section>
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
@@ -418,8 +429,8 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterhearing')" type="textarea" v-model="patient.enterHearing" class="input-text-color q-pl-md"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterhearing')" type="textarea" v-model="patient.enterHearing" class="input-text-color q-pl-md"/>
                 </q-card-section>
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
@@ -431,8 +442,8 @@
                     </div>
                 </q-card-section>
                 <q-separator class="seperator" />
-                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterAllergies')" type="textarea" v-model="patient.allergiesDetails" class="input-text-color q-pl-md"/> 
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterAllergies')" type="textarea" v-model="patient.allergiesDetails" class="input-text-color q-pl-md"/>
                 </q-card-section>
             </q-card>
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
@@ -445,15 +456,38 @@
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
-                    <div class="q-gutter-xs">
-                        <q-checkbox v-model="patient.contactants" val="PCP" color="purple" :label="$t('patient.pcp')" class="input-text-color" /> 
-                        <q-checkbox v-model="patient.contactants" val="PA" color="purple" :label="$t('patient.pa')" class="input-text-color" /> 
-                        
-
-                    </div>  
+                    <q-checkbox v-model="patient.contactants" val="Rubber" color="purple" :label="$t('patient.rubber')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.contactants" val="Dyes" color="purple" :label="$t('patient.dyes')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.contactants" val="Lipstick" color="purple" :label="$t('patient.lipstick')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.contactants" val="Bindi" color="purple" :label="$t('patient.bindi')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.contactants" val="Leather" color="purple" :label="$t('patient.leather')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                    <q-checkbox v-model="patient.contactants" val="Plastic" color="purple" :label="$t('patient.plastic')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.contactants" val="Medicaments" color="purple" :label="$t('patient.medicaments')" class="input-text-color" />
+                </q-card-section>
+                <q-separator class="seperator" />
+                <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-checkbox v-model="patient.contactants" val="Jewellery" color="purple" :label="$t('patient.jewellery')" class="input-text-color" />
                 </q-card-section>
             </q-card>
-            <div v-for="contactants in patient.contactants">
+            <!-- <div v-for="contactants in patient.contactants" :key="contactants.id">
                 <q-card class="my-card no-shadow q-mt-lg q-mb-lg" v-if="contactants==='PCP'">
                     <q-card-section class="bg-pink1 text-white">
                         <div class="row q-pt-xs q-pb-xs">
@@ -463,8 +497,8 @@
                         </div>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.pcpDetails')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.pcpDetails')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/>
                     </q-card-section>
                 </q-card>
                 <q-card class="my-card no-shadow q-mt-lg q-mb-lg" v-else-if="contactants==='PA'">
@@ -476,11 +510,11 @@
                         </div>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.paDetails')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.paDetails')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/>
                     </q-card-section>
                 </q-card>
-            </div>
+            </div> -->
             <q-card class="my-card no-shadow q-mt-lg q-mb-lg">
                 <q-card-section class="bg-pink1 text-white">
                     <div class="row q-pt-xs q-pb-xs">
@@ -492,16 +526,14 @@
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
                     <div class="q-gutter-xs">
-                        <q-checkbox v-model="patient.habits" val="Alcohol" color="purple" :label="$t('patient.alcohol')" class="input-text-color" /> 
-                        <q-checkbox v-model="patient.habits" val="Smoking" color="purple" :label="$t('patient.smoking')" class="input-text-color" /> 
-                        <q-checkbox v-model="patient.habits" val="Tobacco" color="purple" :label="$t('patient.tobacco')" class="input-text-color" /> 
-                        <q-checkbox v-model="patient.habits" val="Oth" color="purple" :label="$t('patient.others')" class="input-text-color" /> 
-                        
-
-                    </div>  
+                        <q-checkbox v-model="patient.habits" val="Alcohol" color="purple" :label="$t('patient.alcohol')" class="input-text-color" />
+                        <q-checkbox v-model="patient.habits" val="Smoking" color="purple" :label="$t('patient.smoking')" class="input-text-color" />
+                        <q-checkbox v-model="patient.habits" val="Tobacco" color="purple" :label="$t('patient.tobacco')" class="input-text-color" />
+                        <q-checkbox v-model="patient.habits" val="Oth" color="purple" :label="$t('patient.others')" class="input-text-color" />
+                    </div>
                 </q-card-section>
             </q-card>
-            <div v-for="habits in patient.habits">
+            <div v-for="habits in patient.habits" :key="habits.id">
                 <q-card class="my-card no-shadow q-mt-lg q-mb-lg" v-if="habits==='Oth'">
                     <q-card-section class="bg-pink1 text-white">
                         <div class="row q-pt-xs q-pb-xs">
@@ -511,73 +543,64 @@
                         </div>
                     </q-card-section>
                     <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">  
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.otherHabits')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/> 
+                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.otherHabits')" type="textarea" v-model="patient.pcpDetails" class="input-text-color q-pl-md"/>
                     </q-card-section>
                 </q-card>
-                
             </div>
         </div>
 
     </q-page>
 </template>
 <script lang="ts">
-import { Vue, Component, Watch } from 'vue-property-decorator';
-
-import {Patient, LocationType, EvolutionType, Thyroid , Diet} from '../models/patient/patient';
+/* eslint-disable @typescript-eslint/no-unsafe-call */
+import { Vue, Component } from 'vue-property-decorator'
+import { Patient, LocationType, EvolutionType, Thyroid, Diet } from '../models/patient/patient'
 @Component({
 })
 export default class HistoryPage extends Vue {
-    public falseValue:string="N";
-    public trueValue:string="Y";
-    private patient:Patient = new Patient();
-    public locationFirstLension:any=[];
+    public falseValue='N';
+    public trueValue='Y';
+    public patient:Patient = new Patient();
+    public locationFirstLension : any=[];
     public locationFirstLensionOptions:any=[];
     public evolution:any=[];
     public evolutionOptions:any=[];
-   //public symptoms:any=[];
-   // public symptomsOptions:any=[];
     public thyroid:any=[];
     public thyroidOptions:any=[];
     public diet:any=[];
     public dietOptions:any=[];
- 
-   public created(){
-       Object.keys(LocationType).forEach((key, index) => {
-      
-      this.locationFirstLensionOptions.push({
-        code: key,
-        label: key,
-      });
-    });
-    Object.keys(EvolutionType).forEach((key,index) => {
+    // eslint-disable-next-line
+    public created () {
+      Object.keys(LocationType).forEach((key, index) => {
+        // eslint-disable-next-line
+        this.locationFirstLensionOptions.push({
+          code: key,
+          label: key
+        })
+      })
+      Object.keys(EvolutionType).forEach((key, index) => {
+        // eslint-disable-next-line
         this.evolutionOptions.push({
-            code:key,
-            label:key,
-        });
-        
-    });
-    /* Object.keys(SymptomsType).forEach((key,index) => {
-        this.symptomsOptions.push({
-            code:key,
-            label:key,
+          code: key,
+          label: key
         })
-    }); */
-    Object.keys(Thyroid).forEach((key,index) => {
+      })
+      Object.keys(Thyroid).forEach((key, index) => {
+        // eslint-disable-next-line
         this.thyroidOptions.push({
-            code:key,
-            label:this.$t('patient.' + key),
+          code: key,
+          label: this.$t('patient.' + key)
         })
-        
-    });
-    Object.keys(Diet).forEach((key,index) => {
+      })
+      Object.keys(Diet).forEach((key, index) => {
+        // eslint-disable-next-line
         this.dietOptions.push({
-            code:key,
-            label:key,
+          code: key,
+          label: key
         })
-        
-    });
-   }
-
+      })
+    }
 }
+
 </script>
