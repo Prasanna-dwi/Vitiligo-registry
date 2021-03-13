@@ -8,7 +8,8 @@ const routes: RouteConfig[] = [
       { path: '', name:'history', component: () => import('pages/History.vue') ,meta :{ showTabMenu:true, label: 'History' } },
       { path: 'treatment', name:'treatment', component: () => import('pages/Treatment.vue'),meta :{ showTabMenu:true, label: 'Treatment' } },
       { path: 'examination', name:'examination', component: () => import('pages/Examination.vue'),meta :{ showTabMenu:true, label: 'Examination' } },
-      { path: 'questions', name:'questions', component: () => import('pages/QualityLife.vue'),meta :{ showTabMenu:true, label: 'QualityLife' } }
+      { path: 'questions', name:'questions', component: () => import('pages/QualityLife.vue'),meta :{ showTabMenu:true, label: 'QualityLife' } },
+      { path: 'investigations', name:'investigations', component: () => import('pages/Investigation.vue'),meta :{ showTabMenu:true, label: 'Investigation' } }
     ]
 
   },

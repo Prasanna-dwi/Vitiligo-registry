@@ -5,10 +5,10 @@
             <q-btn color="white" label="" flat to="/examination" class="no-padding arrow-buttons"> <q-icon name="keyboard_arrow_left" class="text-h6"/></q-btn>
             </div>
             <div class="col-10">
-                <h6 class="text-h6 no-margin text-center text-white">QOL(QUALITY OF LIFE) QUESTIONS</h6>
+                <h6 class="text-h6 no-margin text-center text-white">{{$t('patient.qqlQuestions')}}</h6>
             </div>
             <div class="col-1">
-                <q-btn color="white" label="" flat to="/" class="arrow-buttons"> <q-icon name="keyboard_arrow_right" class="text-h6"/></q-btn>
+                <q-btn color="white" label="" flat to="/investigations" class="arrow-buttons"> <q-icon name="keyboard_arrow_right" class="text-h6"/></q-btn>
             </div>
         </div>
         <div class="q-pl-md q-pr-md">
@@ -32,10 +32,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ1Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ1==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ1Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                 </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -58,10 +60,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ1==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ2Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ2==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" >
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ2Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -84,10 +88,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ2==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ3Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ3==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ3Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                 </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -111,10 +117,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ3==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ4Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ4==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ4Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -138,10 +146,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ4==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ5Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ5==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ5Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -165,11 +175,13 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ6==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ6Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
-                 </q-card>
+                    <div v-if="patient.vitiligoQ6==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ6Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
+                </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
                 <span class="text-grey-13 text-body">Q7)</span>
@@ -192,10 +204,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ7==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ7Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ7==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ7Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -219,10 +233,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ8==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ8Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ8==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ8Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -246,10 +262,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ9==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ9Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ9==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ9Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -273,10 +291,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ10==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ10Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ10==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ10Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -300,10 +320,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ11==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ11Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ11==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ11Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -327,10 +349,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ12==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ12Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ12==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ12Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -354,10 +378,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ13==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ13Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ13==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ13Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -381,10 +407,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ14==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ14Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ14==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ14Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -408,10 +436,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ15==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ15Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ15==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ15Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -435,10 +465,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ16==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ16Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ16==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ16Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -462,10 +494,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ17==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ17Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ17==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ17Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -489,10 +523,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ18==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ18Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ18==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ18Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -516,10 +552,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ19==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ19Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ19==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ19Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -543,10 +581,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ20==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ20Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ20==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ20Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -570,10 +610,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ21==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ21Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ21==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ21Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -597,10 +639,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ22==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ22Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ22==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ22Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -624,10 +668,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ23==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ23Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ23==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ23Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                  </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -651,10 +697,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ24==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ24Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ24==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ24Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                 </q-card>
             </div>
             <div class="question-section q-mt-lg q-mb-lg">
@@ -677,10 +725,12 @@
                             </div>
                         </div>
                     </q-card-section>
-                    <q-separator class="seperator" />
-                    <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs" v-if="patient.vitiligoQ25==='Y'">
-                        <q-input borderless rows="2" :placeholder="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ25Details" class="input-text-color q-pl-md"/>
-                    </q-card-section>
+                    <div v-if="patient.vitiligoQ25==='Y'">
+                        <q-separator class="seperator" />
+                        <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
+                            <q-input borderless rows="2" :label="$t('patient.placeholder.enterDetails')" type="textarea" v-model="patient.vitiligoQ25Details" class="input-text-color q-pl-md"/>
+                        </q-card-section>
+                    </div>
                 </q-card>
             </div>
         </div>

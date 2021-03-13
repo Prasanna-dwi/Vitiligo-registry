@@ -25,15 +25,31 @@ export default {
       paDetails: 'Enter Personal Articles',
       otherHabits: 'Enter Other Habits',
       hairEnter: 'Enter....',
-      otherDetails:"Enter ........"
+      otherDetails:"Enter ........",
+      enterOtherDetails:'Enter Other Details...'
     },
+    xrays:'Xrays',
+    ultraSounds:'Ultrasound',
+    investigation:'Investigations',
+    investigaionReportsUpload:'Investigation Reports Upload',
+    skinInvestigationReports:'Skin Biopsy Investigation Reports',
+    titleInvestigation:'Name of The Investigation Report Title',
+    scrapings:'Scrapings',
+    sss:'SSS',
+    biopsy:'Biopsy',
+    investigationOther:'Other Investigation',
+    bloodInvestigation:'Blood Investigation Reports',
+    qqlQuestions:'QOL(Quality Of Life) Questions',
+    allergies:'Allergies',
+    previousTreatment:'Any Previous Treatments?',
+    autoinmuneDiseases:"Other Autoimmune Diseases",
     scoringMethods: 'Scoring Methods',
     diseaseSigns: 'Signs of disease activity ',
     SGM: 'Segmental',
     ACR: 'Acrofacial',
     MIX: 'Mixed',
     TRI: 'Trichrome',
-    dermoscopy: 'DERMASCOPY',
+    dermoscopy: 'Dermascopy',
     photographs: 'Photographs',
     hair: 'Hair',
     CL: 'Confetti Like',
@@ -104,8 +120,8 @@ export default {
     phTreatment: 'Phototherapy Treatment',
     procedures: 'Procedures',
     generalExamination: 'General Examination',
-    skinType: 'Skin type',
-    hairType: 'Hair type',
+    skinType: 'Skin Type',
+    hairType: 'Hair Type',
     nails: 'Nails',
     filesPick: 'Pick Files',
     removeUploadFiles: 'Remove Uploaded Files',
@@ -163,7 +179,47 @@ export default {
     leather:"Leather",
     plastic:"Plastic",
     medicaments:"Medicaments",
-    jewellery:"Jewellery"
+    jewellery:"Jewellery",
+    LocationType:{
+      Face:'Face', // Face
+      Neck:'Neck', // Neck
+      Trunk:'Trunk', // trunk
+      upperLimbs:'Upper Limbs', // upper limbs
+      lowerLimbs:'Lower Limbs', // lower limbs
+      hands:'Hands', // hands
+      feet:'Feet', // feet
+      scalp:'Scalp', // Scalp
+      OTH:'Others'
+    },
+    EvolutionType:{
+      slow:'Slow', // Slow
+      rapid:'Rapid', // Rapid
+      static:'Static', // Static
+      fluctuating:'Fluctuating' // Fluctuating
+  },
+  Diet:{
+    AL:'Alcohol', // alcohol
+    BL:'Blueberries', // blueberries
+    CT:'Citrus', // citrus
+    CF:'Coffee', // coffee
+    CU:'Curds', // curds
+    FI:'Fish', // fish
+    FJ:'Fruit Juice', // fruit juice
+    GB:'Gooseberries', // gooseberries
+    GP:'Grapes', // grapes
+    PI:'Pickles', // pickles
+    PO:'Pomegranate', // pomegranate
+    PE:'Pears', // pears
+    RM:'Red Meats', // red meats
+    TM:'Tomatoes', // tomatoes
+    WP:'Wheat Products' // wheat products
+  },
+  ScoringMethods:{
+    BSA:'BSA', // BSA
+    VASI:'VASI', // VASI
+    VES:'VES'
+  },
 
-  }
+  },
+  
 }

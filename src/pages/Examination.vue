@@ -23,13 +23,12 @@
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
-                    <q-input borderless :placeholder="$t('patient.placeholder.heightinCMS')" type="number" v-model="patient.heightInCms" class="input-text-color q-pl-md q-pr-md"/>
+                    <q-input borderless :label="$t('patient.placeholder.heightinCMS')" type="number" v-model="patient.heightInCms" class="input-text-color q-pl-md q-pr-md"/>
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
-                    <q-input borderless :placeholder="$t('patient.weight')" type="number" v-model="patient.weight" class="input-text-color q-pl-md q-pr-md"/>
+                    <q-input borderless :label="$t('patient.weight')" type="number" v-model="patient.weight" class="input-text-color q-pl-md q-pr-md"/>
                 </q-card-section>
-                <q-separator class="seperator" />
             </q-card>
             <q-card class="my-card no-shadow no-shadow q-mt-lg q-mb-lg">
                 <q-card-section class="bg-pink1 text-white">
@@ -41,7 +40,7 @@
                 </q-card-section>
                 <q-separator class="seperator" />
                 <q-card-section class="q-pt-md q-pb-md q-pl-xs q-pr-xs">
-                    <div class="row">
+                    <div class="row no-checked-color">
                         <div class="col-6">
                         <q-radio v-model="patient.skinType" val="NS" color="purple" :label="$t('patient.ns')" class="input-text-color" />
                         </div>
@@ -205,7 +204,7 @@ export default class ExaminationPage extends Vue {
          // eslint-disable-next-line
          this.scoringMethodsOptions.push({
            code: key,
-           label: key
+           label: this.$t('patient.ScoringMethods.' + key)
          })
        })
        Object.keys(DiseaseSigns).forEach((key, index) => {

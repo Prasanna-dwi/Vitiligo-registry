@@ -1,105 +1,116 @@
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 export class Patient {
-    name:string;
-    age:number | undefined;
-    gender:string;
-    onSet:Date | undefined;
-    haloNaevi:YES_NO;
+    name:string; //Name
+    age:number | undefined; //Age
+    gender:string; //Gender
+    onSet:Date | undefined; //OnSetDate
+    haloNaevi:YES_NO; //Halo naevi 
     // haloStages:any;
-    drugHistory:any;
-    bodySurface:YES_NO;
-    bodySurfaceSites:any;
-    occupation:string;
-    hobbies:string;
-    habiets:string;
-    familyHistory:any;
-    otherFD:string;
-    hairEnter:string;
-    PHT:any;
-    stDetails:string;
-    tpDetails:string;
-    phtDetails:string;
-    phTherapyTreatment:any;
-    allergiesDetails:string;
-    procedures:string;
-    heightInCms:number | undefined;
-    skinType:string;
-    autoimmuneD:any;
-    otherautoimmuneD:string;
-    contactants:any;
-    habits:any;
-    weight:number | undefined;
-    oAUD:string;
+    drugHistory:any; 
+    bodySurface:YES_NO; // Body surface involved / sites
+    bodySurfaceSites:any; // Body surface involved / sites checkboxs
+    occupation:string; //occupation
+    hobbies:string; //Hobbies
+    habiets:string; //Habits
+    familyHistory:any; //Family History
+    otherFD:string; //Other Family Details
+    hairEnter:string; 
+    PHT:any; //Pharmacological
+    stDetails:string; //systemic TextBox
+    tpDetails:string; //Topical Textbox
+    phtDetails:string; //phototherapy Details
+    phTherapyTreatment:any; //phototherapy
+    allergiesDetails:string; //allergies Details
+    procedures:string; //Procedues
+    heightInCms:number | undefined; //height
+    skinType:string; //Skin Type
+    autoimmuneD:any; //autoimmune diseases
+    otherautoimmuneD:string; //if other autoimmune diseases
+    contactants:any; //contactants
+    habits:any; //habits
+    weight:number | undefined; //Weight
+    oAUD:string; 
+    coMorbidities:any; //co-morbidities
+    thyroid:any; //coMorbidities Thyroid
     // pcpDetails:string;
-    enterVision:string;
-    enterHearing:string;
-    symptionType:any;
-    vitiligoQ1:YES_NO;
-    vitiligoQ1Details:string;
-    vitiligoQ2:YES_NO;
-    vitiligoQ2Details:string;
-    vitiligoQ3:YES_NO;
-    vitiligoQ3Details:string;
-    vitiligoQ4:YES_NO;
-    vitiligoQ4Details:string;
-    vitiligoQ5:YES_NO;
-    vitiligoQ5Details:string;
-    vitiligoQ6:YES_NO;
-    vitiligoQ6Details:string;
-    vitiligoQ7:YES_NO;
-    vitiligoQ7Details:string;
-    vitiligoQ8:YES_NO;
-    vitiligoQ8Details:string;
-    vitiligoQ9:YES_NO;
-    vitiligoQ9Details:string;
-    vitiligoQ10:YES_NO;
-    vitiligoQ10Details:string;
-    vitiligoQ11:YES_NO;
-    vitiligoQ11Details:string;
-    vitiligoQ12:YES_NO;
-    vitiligoQ12Details:string;
-    vitiligoQ13:YES_NO;
-    vitiligoQ13Details:string;
-    vitiligoQ14:YES_NO;
-    vitiligoQ14Details:string;
-    vitiligoQ15:YES_NO;
-    vitiligoQ15Details:string;
-    vitiligoQ16:YES_NO;
-    vitiligoQ16Details:string;
-    vitiligoQ17:YES_NO;
-    vitiligoQ17Details:string;
-    vitiligoQ18:YES_NO;
-    vitiligoQ18Details:string;
-    vitiligoQ19:YES_NO;
-    vitiligoQ19Details:string;
-    vitiligoQ20:YES_NO;
-    vitiligoQ20Details:string;
-    vitiligoQ21:YES_NO;
-    vitiligoQ21Details:string;
-    vitiligoQ22:YES_NO;
-    vitiligoQ22Details:string;
-    vitiligoQ23:YES_NO;
-    vitiligoQ23Details:string;
-    vitiligoQ24:YES_NO;
-    vitiligoQ24Details:string;
-    vitiligoQ25:YES_NO;
-    vitiligoQ25Details:string;
-    paDetails:string;
-    otherHabits:string;
+    enterVision:string; //Vision Text Box
+    enterHearing:string; //Hearing Text Box
+    symptionType:any; //Symptoms
+    vitiligoQ1:YES_NO;  // quality of life Questions 
+    vitiligoQ1Details:string; // quality of life Questions 
+    vitiligoQ2:YES_NO; // quality of life Questions 
+    vitiligoQ2Details:string; // quality of life Questions 
+    vitiligoQ3:YES_NO; // quality of life Questions 
+    vitiligoQ3Details:string; // quality of life Questions 
+    vitiligoQ4:YES_NO; // quality of life Questions 
+    vitiligoQ4Details:string; // quality of life Questions 
+    vitiligoQ5:YES_NO; // quality of life Questions 
+    vitiligoQ5Details:string; // quality of life Questions 
+    vitiligoQ6:YES_NO; // quality of life Questions 
+    vitiligoQ6Details:string; // quality of life Questions 
+    vitiligoQ7:YES_NO; // quality of life Questions 
+    vitiligoQ7Details:string; // quality of life Questions 
+    vitiligoQ8:YES_NO; // quality of life Questions 
+    vitiligoQ8Details:string; // quality of life Questions 
+    vitiligoQ9:YES_NO; // quality of life Questions 
+    vitiligoQ9Details:string; // quality of life Questions 
+    vitiligoQ10:YES_NO; // quality of life Questions 
+    vitiligoQ10Details:string; // quality of life Questions 
+    vitiligoQ11:YES_NO; // quality of life Questions 
+    vitiligoQ11Details:string; // quality of life Questions 
+    vitiligoQ12:YES_NO; // quality of life Questions 
+    vitiligoQ12Details:string; // quality of life Questions 
+    vitiligoQ13:YES_NO; // quality of life Questions 
+    vitiligoQ13Details:string; // quality of life Questions 
+    vitiligoQ14:YES_NO; // quality of life Questions 
+    vitiligoQ14Details:string; // quality of life Questions 
+    vitiligoQ15:YES_NO; // quality of life Questions 
+    vitiligoQ15Details:string; // quality of life Questions 
+    vitiligoQ16:YES_NO; // quality of life Questions 
+    vitiligoQ16Details:string; // quality of life Questions 
+    vitiligoQ17:YES_NO; // quality of life Questions 
+    vitiligoQ17Details:string; // quality of life Questions 
+    vitiligoQ18:YES_NO; // quality of life Questions 
+    vitiligoQ18Details:string; // quality of life Questions 
+    vitiligoQ19:YES_NO; // quality of life Questions 
+    vitiligoQ19Details:string; // quality of life Questions 
+    vitiligoQ20:YES_NO; // quality of life Questions 
+    vitiligoQ20Details:string; // quality of life Questions 
+    vitiligoQ21:YES_NO; // quality of life Questions 
+    vitiligoQ21Details:string; // quality of life Questions 
+    vitiligoQ22:YES_NO; // quality of life Questions  
+    vitiligoQ22Details:string; // quality of life Questions 
+    vitiligoQ23:YES_NO; // quality of life Questions 
+    vitiligoQ23Details:string; // quality of life Questions 
+    vitiligoQ24:YES_NO; // quality of life Questions 
+    vitiligoQ24Details:string; // quality of life Questions 
+    vitiligoQ25:YES_NO; // quality of life Questions 
+    vitiligoQ25Details:string; // quality of life Questions 
+    // paDetails:string; 
+    otherHabits:string; //Other Habits
+    previousTreatment:YES_NO; //Prebious Treatment
+    bloodInvestigation:YES_NO; //Blood investigation Reports
+    skinInvestigationReports:YES_NO; //Skin Biopsy investigation Reports
+    skinInvestigationReportsType:any; //Skin Biopsy investigation Reports Type
+    investigationOther:YES_NO; //Investigation Other
+    investigationOtherOptions:any; //Investigation Other Details
+    titleInvestigation:any; //Investigation Title
+
     constructor (params:Patient = {} as Patient) {
       const {
         name = '',
         gender = 'M',
         haloNaevi = 'Y',
-        bodySurface = 'Y',
+        bodySurface = 'N',
+        previousTreatment = 'N',
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-        bodySurfaceSites = ['BSF'],
+        bodySurfaceSites = [],
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         drugHistory = ['MAS'],
         // haloStages=['LL'],
         occupation = '',
         PHT = ['ST'],
-        autoimmuneD = ['DM'],
+        autoimmuneD = [],
         skinType = '',
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         phTherapyTreatment = [],
@@ -111,6 +122,8 @@ export class Patient {
         symptionType = ['pain'],
         // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
         contactants = [],
+        coMorbidities=[],
+        thyroid=[],
         otherFD = '',
         stDetails = '',
         tpDetails = '',
@@ -171,11 +184,17 @@ export class Patient {
         enterVision = '',
         allergiesDetails = '',
         // pcpDetails = '',
-        paDetails = '',
+        // paDetails = '',
         habits = [],
         otherHabits = '',
         hairEnter = '',
         otherautoimmuneD='',
+        bloodInvestigation='Y',
+        skinInvestigationReports='Y',
+        skinInvestigationReportsType=[],
+        investigationOther='Y',
+        investigationOtherOptions=[],
+        titleInvestigation=[{investigationTitle:''}],
       } = params
       this.name = name
       this.gender = gender
@@ -251,7 +270,7 @@ export class Patient {
       this.allergiesDetails = allergiesDetails
       this.contactants = contactants
       // this.pcpDetails = pcpDetails
-      this.paDetails = paDetails
+      // this.paDetails = paDetails
       this.habits = habits
       this.otherHabits = otherHabits
       this.phTherapyTreatment = phTherapyTreatment
@@ -259,6 +278,15 @@ export class Patient {
       this.hairEnter = hairEnter
       this.autoimmuneD=autoimmuneD
       this.otherautoimmuneD=otherautoimmuneD
+      this.coMorbidities=coMorbidities
+      this.thyroid=thyroid
+      this.previousTreatment=previousTreatment
+      this.bloodInvestigation=bloodInvestigation
+      this.skinInvestigationReports=skinInvestigationReports
+      this.skinInvestigationReportsType=skinInvestigationReportsType
+      this.investigationOther=investigationOther
+      this.investigationOtherOptions=investigationOtherOptions
+      this.titleInvestigation=titleInvestigation
     }
 }
 export type YES_NO = 'Y' | 'N' | 'null' ;
@@ -288,6 +316,7 @@ export enum EvolutionType{
     Hands='Hands' //Hands
 
 } */
+// co-morbidities Thyroid
 export enum Thyroid{
     HYPO='Hypothyroidism', // Hypothyroidism
     HYPE='Hyperthyroidism', // Hyperthyroidism
